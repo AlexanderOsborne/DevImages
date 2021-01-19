@@ -1,10 +1,12 @@
 <h2> Create Account</h2>
 <%= form_for User.new do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, placeholder: "Name"%><br>
 <%= f.label :email %>
-<%= f.text_field :email, placeholder: "Email"  %>
+<%= f.text_field :email, placeholder: "Email"  %><br>
 <%= f.label :password%>
-<%= f.password_field :password, placeholder: "Password" %>
+<%= f.password_field :password, placeholder: "Password" %><br>
 <%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+<%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br>
 <%= f.submit "Create Account" %>
 <% end %>
