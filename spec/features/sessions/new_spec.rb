@@ -12,7 +12,7 @@ RSpec.describe 'As a visitor', type: :feature do
       fill_in "Email", with:"#{@user1.email}"
       fill_in "Password", with:"#{@user1.password}"
       click_on "Submit"
-      # require 'pry'; binding.pry
+     
       expect(current_path).to eq(images_path)
     end
   end
