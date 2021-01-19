@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   
   #Users
   get '/signup', to: 'users#new', as: 'new_user'
-  post 'users', to: 'user#create'
+  post 'users', to: 'users#create'
   
 end
