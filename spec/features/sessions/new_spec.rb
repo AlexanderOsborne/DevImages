@@ -13,7 +13,8 @@ RSpec.describe 'As a visitor', type: :feature do
       fill_in "Password", with:"#{@user1.password}"
       click_on "Submit"
      
-      expect(current_path).to eq(images_path)
+      expect(current_path).to eq(user_dashboard_path)
+      expect(page).to have_content(@user1.name)
     end
   end
 end
