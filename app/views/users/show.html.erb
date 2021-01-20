@@ -1,1 +1,6 @@
 <h1><%= "Welcome #{@user.name}"%></h1>
+
+<%=  form_tag(search_path, :method => "get")%>
+<%= label_tag(:search, "What kind of Image are you looking for?") %>
+<%= text_field_tag :search, params[:search]%>
+<%= submit_tag("Search") %>

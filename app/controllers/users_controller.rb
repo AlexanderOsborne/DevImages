@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def new
   end
 
@@ -16,6 +17,11 @@ class UsersController < ApplicationController
       flash[:error] = "Invalid Login"
       redirect_to new_user_path
     end
+  end
+
+  def create
+    search = params[:search]
+    api_search(search)
   end
 
   private

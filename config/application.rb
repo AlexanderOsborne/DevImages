@@ -30,5 +30,7 @@ module PhotoBook
     config.generators do |g|
       g.test_framework :rspec
     end
+
+    config.autoload_paths << "/#{Rails.root}/lib"
   end
 end

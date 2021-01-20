@@ -1,5 +1,7 @@
 class SearchController < ApplicationController
 
+  # @service = UnsplashService.new
+  
   def index
 
   end
@@ -10,7 +12,7 @@ class SearchController < ApplicationController
 
   def create
     search = params[:search]
-    Services::UnsplashService.api_search(search)
-
+    require 'pry'; binding.pry
+    UnsplashService.api_search(search)
   end
 end
