@@ -16,8 +16,11 @@ ActiveRecord::Schema.define(version: 2021_01_19_020858) do
   enable_extension "plpgsql"
 
   create_table "images", force: :cascade do |t|
-    t.string "title"
+    t.integer "unsplash_id"
     t.string "artist"
+    t.string "portfolio"
+    t.string "small"
+    t.string "full"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -26,7 +26,7 @@ RSpec.describe 'As a visitor', type: :feature do
       expect(current_path).to eq(user_dashboard_path)
       fill_in "search", with: "Dogs"
       
-      expect(page).to have_content("dogss")
+      expect(current_path).to eq(user_dashboard_path)
     end
   end
 end
