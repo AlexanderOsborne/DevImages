@@ -3,12 +3,14 @@ module ImagesHelper
   def parse_image_search(search)
   results = UnsplashService.api_search(search)
   json_array = make_json(results)
-  @parsed_array = parse_json(json_array)
+  parsed_array = parse_json(json_array)
 
-  @hash_array = @parsed_array.map do |parse|
+  hash_array = parsed_array.map do |parse|
     create_hash(parse)
     end
+  hash_array
   end
+  
 
   def make_json(results)
     results.map do |result|

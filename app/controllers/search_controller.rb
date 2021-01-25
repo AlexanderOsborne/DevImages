@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
-
+  include ImagesHelper
   
   def index
 
@@ -11,7 +11,7 @@ class SearchController < ApplicationController
 
   def create
     search = params[:search]
-    require 'pry'; binding.pry
-    results = UnsplashService.api_search(search)
+    @results = parse_image_search(search)
+    render :index
   end
 end
