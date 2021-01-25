@@ -12,8 +12,8 @@ RSpec.describe 'as a visitor', type: :feature do
       fill_in "Confirm Password", with:"password"
       click_on "Create Account"
 
-      expect(current_path).to eq(images_path)
-      expect(page).to have_content("Images")
+      expect(current_path).to eq(user_dashboard_path)
+      
     end
   end
 end

@@ -12,8 +12,21 @@ RSpec.describe 'As a visitor', type: :feature do
       fill_in "Email", with:"#{@user1.email}"
       fill_in "Password", with:"#{@user1.password}"
       click_on "Submit"
-      # require 'pry'; binding.pry
-      expect(current_path).to eq(images_path)
+     
+      expect(current_path).to eq(user_dashboard_path)
+      expect(page).to have_content(@user1.name)
+    end
+
+    it 'can search images' do
+      visit '/login'
+      
+      fill_in "Email", with:"#{@user1.email}"
+      fill_in "Password", with:"#{@user1.password}"
+      click_on "Submit"
+      expect(current_path).to eq(user_dashboard_path)
+      fill_in "search", with: "Dogs"
+      
+      expect(current_path).to eq(user_dashboard_path)
     end
   end
 end
