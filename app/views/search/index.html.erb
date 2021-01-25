@@ -2,4 +2,5 @@
 
 <% @results.each do |result| %>
   <%= image_tag(result[:small])%>
+  <%=  button_to 'Save Image', images_path, method: post%>
 <% end %>
