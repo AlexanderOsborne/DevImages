@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2021_01_19_020858) do
   enable_extension "plpgsql"
 
   create_table "images", force: :cascade do |t|
-    t.integer "unsplash_id"
     t.string "artist"
     t.string "portfolio"
     t.string "small"

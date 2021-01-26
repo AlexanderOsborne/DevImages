@@ -26,19 +26,14 @@ module ImagesHelper
 
   def create_hash(parse)
     h = {
-    name: find_name(parse),
-    id: find_id(parse),
+    artist: find_artist(parse),
     portfolio: find_portfolio(parse),
     small: find_small(parse),
     full: find_full(parse)
     }
   end
 
-  def find_id(parse)
-    parse[:attributes][:table][:id]
-  end
-
-  def find_name(parse)
+  def find_artist(parse)
     parse[:attributes][:table][:user][:name]
   end
 

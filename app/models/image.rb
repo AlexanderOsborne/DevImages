@@ -1,6 +1,6 @@
 class Image < ApplicationRecord
-  validates_presence_of :title,
-                        :artist,
-                        :user_id
+  validates_presence_of :artist,
+                        :small,
+                        :full
   belongs_to :user
 end
