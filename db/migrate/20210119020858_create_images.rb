@@ -1,7 +1,6 @@
 class CreateImages < ActiveRecord::Migration[5.2]
   def change
     create_table :images do |t|
-      t.integer :unsplash_id
       t.string :artist
       t.string :portfolio
       t.string :small

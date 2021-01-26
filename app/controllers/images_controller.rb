@@ -15,10 +15,12 @@ class ImagesController < ApplicationController
   end
 
   def create
+    
     image = Image.new(image_params_create)
+    require 'pry'; binding.pry
     if image.save
       flash[:success] = "Image Saved"
-      redirect_to user_dashboard_path
+      redirect_to images_path
     else
       flash[:error] = "Image Not Saved"
       redirect_to user_dashboard_path
@@ -27,6 +29,6 @@ class ImagesController < ApplicationController
 
   private
   def image_params_create
-    params.permit(:unsplash_id, :artist, :portfolio, :small, :full, :user_id)
+    params.permit(:artist, :portfolio, :small, :full, :user_id)
   end
 end
