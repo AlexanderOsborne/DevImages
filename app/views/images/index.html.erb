@@ -1,4 +1,4 @@
 <h1> Images </h1>
 <% @images.each do |image| %>
-<%= image_tag(image[:small])%>
+<%= link_to image_tag(image[:small]), image_path(image.id) %>
 <% end %>

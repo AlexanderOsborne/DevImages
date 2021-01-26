@@ -14,10 +14,13 @@ class ImagesController < ApplicationController
 
   end
 
+  def show
+    @image = Image.find(params[:id])
+  end
+
   def create
     
     image = Image.new(image_params_create)
-    require 'pry'; binding.pry
     if image.save
       flash[:success] = "Image Saved"
       redirect_to images_path

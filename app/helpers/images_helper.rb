@@ -32,10 +32,6 @@ module ImagesHelper
     full: find_full(parse)
     }
   end
-  
-  # def find_id(parse)
-  #   parse[:attributes][:table][:id]
-  # end
 
   def find_artist(parse)
     parse[:attributes][:table][:user][:name]
