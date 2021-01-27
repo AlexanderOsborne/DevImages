@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root 'sessions#new'
   #Images
   resources :images
+
+  root 'sessions#new'
   
   #Users
   get '/signup', to: 'users#new', as: 'new_user'
